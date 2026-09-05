@@ -30,9 +30,9 @@ pipeline {
           withCredentials([sshUserPrivateKey(credentialsId: 'Digital-Ocean', keyFileVariable: 'keyfile', usernameVariable: 'user')]) {
             remote.user = user
             remote.identityFile = keyfile
-            sshCommand remote: remote, command: "ls -l"
+            // sshCommand remote: remote, command: "ls -l"
             // sshScript remote: remote, script: "prepare-ansible-server.sh"
-            // sshCommand remote: remote, command: "ansible-playbook my-playbook.yaml"
+            sshCommand remote: remote, command: "ansible-playbook my-playbook.yaml"
           }
         }
       }
