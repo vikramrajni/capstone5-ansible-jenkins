@@ -27,11 +27,12 @@ pipeline {
           remote.host = ANSIBLE_SERVER
           remote.allowAnyHosts = true
 
-          withCredentials([sshUserPrivateKey(credentialsId: 'ansible-server-key', keyFileVariable: 'keyfile', usernameVariable: 'user')]) {
+          withCredentials([sshUserPrivateKey(credentialsId: 'Digital-Ocean', keyFileVariable: 'keyfile', usernameVariable: 'user')]) {
             remote.user = user
             remote.identityFile = keyfile
-            sshScript remote: remote, script: "prepare-ansible-server.sh"
-            sshCommand remote: remote, command: "ansible-playbook my-playbook.yaml"
+            sshScript remote: remote, command: "ls -l"
+            // sshScript remote: remote, script: "prepare-ansible-server.sh"
+            // sshCommand remote: remote, command: "ansible-playbook my-playbook.yaml"
           }
         }
       }
