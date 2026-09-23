@@ -7,7 +7,7 @@ pipeline {
     stage("copy files to ansible server") {
       steps {
         script {
-          echo "copying all neccessary files to ansible control node"
+          echo "copying all necessary files to ansible control node"
           sshagent(['Digital-Ocean']) {
             sh "scp -o StrictHostKeyChecking=no ansible/* root@${ANSIBLE_SERVER}:/root"
 
