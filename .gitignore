@@ -1,2 +1,5 @@
 .idea/*
 target
+src/
+pom.xml
+script.groovy
