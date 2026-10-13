@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
 apt update
-apt install ansible -y
+apt install ansible-core
 apt install python3-boto3
+
