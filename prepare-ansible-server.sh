@@ -2,5 +2,5 @@
 
 apt update
 apt install ansible-core
-apt install python3-boto3
+apt install -y python3-boto3
 
