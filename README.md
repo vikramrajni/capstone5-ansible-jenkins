@@ -20,4 +20,6 @@ This project demonstrates how to integrate Jenkins and Ansible to automate the c
    The playbook will install docker and docker compose on both EC2 instances
 
 
-
+Note: Ansible dynamically discovers the EC2 server details using "aws_ec2"  ansible plugin.
+The "ansible.cfg" file references the "inventory_aws_ec2.yaml" as the inventory file which contains the aws_plugin and server login information.
+ 
