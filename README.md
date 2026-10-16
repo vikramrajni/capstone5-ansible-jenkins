@@ -21,5 +21,9 @@ This project demonstrates how to integrate Jenkins and Ansible to automate the c
 
 
 Note: Ansible dynamically discovers the EC2 server details using "aws_ec2"  ansible plugin.
-The "ansible.cfg" file references the "inventory_aws_ec2.yaml" as the inventory file which contains the aws_plugin and server login information.
+The "ansible.cfg" file references the "inventory_aws_ec2.yaml" as the inventory file which contains the aws_plugin and server login information. 
+
+Note: AWS credentials will be required on the Ansible server for Ansible to discover the instances. The ".aws" folder containing the credentials file.
+
+
  
